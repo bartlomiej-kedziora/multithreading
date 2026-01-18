@@ -1,4 +1,4 @@
-package pl.eked.exercise.ex02;
+package pl.eked.exercise.block01.ex02;
 
 import java.util.ArrayList;
 import java.util.List;

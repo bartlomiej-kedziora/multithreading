@@ -1,4 +1,4 @@
-package pl.eked.exercise.ex01;
+package pl.eked.exercise.block01.ex01;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 
