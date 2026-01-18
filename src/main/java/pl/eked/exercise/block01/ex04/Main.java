@@ -1,4 +1,4 @@
-package pl.eked.exercise.ex04;
+package pl.eked.exercise.block01.ex04;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -8,6 +8,7 @@ import java.util.List;
  * Topics:
  * - thread.join() as a solution for waiting on the results of thread
  * - thread.join(x ms) as a solution for skipping thread if executed more than x ms.
+ * - case study - sum result of base^power for two threads
  */
 public class Main {
 

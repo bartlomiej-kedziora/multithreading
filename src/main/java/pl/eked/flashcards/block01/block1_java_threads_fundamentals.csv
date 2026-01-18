@@ -1,0 +1,10 @@
+What does RUNNABLE mean in Java?,A thread is either running on CPU or ready to run. It does NOT guarantee actual execution.
+Which thread type prevents JVM shutdown?,A non-daemon (worker) thread keeps the JVM alive.
+What does Thread.join() do?,It blocks the calling thread until the target thread finishes execution.
+Why is extending Thread usually discouraged?,Because it prevents inheritance and mixes task logic with execution.
+Who schedules Java threads?,Both the JVM and the operating system.
+Does thread start order guarantee execution order?,No. Execution order is controlled by the OS scheduler.
+What happens if only daemon threads remain?,The JVM exits immediately.
+What is the main responsibility of Runnable?,To represent a unit of work without controlling execution.
+Is RUNNABLE the same as running?,No. RUNNABLE includes both running and ready-to-run states.
+What does join() NOT require?,Shared state or locks.

@@ -1,4 +1,4 @@
-package pl.eked.exercise.ex03;
+package pl.eked.exercise.block01.ex03;
 
 import java.math.BigInteger;
 
