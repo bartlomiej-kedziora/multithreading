@@ -1,5 +1,7 @@
 package pl.eked.project.block01.pr03;
 
+import java.util.List;
+
 /**
  * MINI-PROJECT 3: OS Scheduling Illusion
  *
@@ -20,6 +22,26 @@ package pl.eked.project.block01.pr03;
 public class OSSchedulingIllusion {
 
     public static void main(String[] args) {
+        List<Thread> threads = List.of(
+            new Thread(new ThreadTask()),
+            new Thread(new ThreadTask()),
+            new Thread(new ThreadTask()),
+            new Thread(new ThreadTask()),
+            new Thread(new ThreadTask())
+        );
 
+        threads.forEach(Thread::start);
+    }
+
+    private static class ThreadTask implements Runnable {
+
+        @Override
+        public void run() {
+            System.out.println(Thread.currentThread().getName() + " started counting: ");
+            for (int i = 1; i < 6; i++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
     }
 }
