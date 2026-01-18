@@ -23,6 +23,30 @@ package pl.eked.project.block01.pr02;
 public class RunnableVsThread {
 
     public static void main(String[] args) {
+        Thread thread1 = new MyCustomThread();
+        thread1.setName("MyCustomThread");
 
+        Thread thread2 = new Thread(new MyCustomThreadTask());
+        thread2.setName("MyCustomThread2");
+
+        thread1.start();
+        thread2.start();
+    }
+
+    private static class MyCustomThread extends Thread {
+        @Override
+        public void run() {
+            System.out.println("Thread1 strong coupling WHAT + WHERE + HOW");
+            System.out.println("Thread1 name: " + this.getName());
+        }
+    }
+
+    private static class MyCustomThreadTask implements Runnable {
+
+        @Override
+        public void run() {
+            System.out.println("Thread2 decoupling WHAT");
+            System.out.println("Thread2 name: " + Thread.currentThread().getName());
+        }
     }
 }
