@@ -19,4 +19,7 @@ Exercise and small projects for practice
   - thread.join(x ms) as a solution for skipping thread if executed more than x ms.
   - case study - sum result of base^power for two threads
 ## ex05
+  - throughput as a one type of measuring thread time execution
+  - thread pool eliminates some of the cost of multithreading
+## ex06
 
