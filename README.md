@@ -22,4 +22,6 @@ Exercise and small projects for practice
   - throughput as a one type of measuring thread time execution
   - thread pool eliminates some of the cost of multithreading
 ## ex06
+  - debug stack frames
+## ex07
 

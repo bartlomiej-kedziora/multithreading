@@ -10,3 +10,31 @@
   - choose the best strategy - handling each request on a different thread
 ---
 # Data sharing between Threads
+## Stack & Heap Memory Regions
+  - what is stack? 
+    - memory region where (named stack frame):
+      * methods are called
+      * arguments are passed
+      * local variables are stored
+    - stack + instruction pointer = state of each thread's execution
+  - stack's properties:
+    * are not shared among threads
+    * statically allocated when thread is created
+    * stack's size is fixed and relatively small
+    * if our calling hierarchy is too deep, we may get an StackOverflow Exception 
+      (i.e. recursive calls)
+  - what is allocated on the Heap?
+    - objects (anything created with the "new" operator):
+      * String
+      * Object
+      * Collection
+      * ...
+    - Members of classes
+    - Static variables
+  - heap memory management:
+    - governed and managed by Garbage Collector
+    - members of classes - exists as long as their parent object exists
+    - static variables - stay forever
+
+  ![process_context.png](img/process_context.png)
+## Resource Sharing & Introduction to Critical Sections
